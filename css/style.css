@@ -114,6 +114,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-.Orders .text-uppercase{
+.Order .text-uppercase{
     background-image: url(../assets/img/item2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search .text-uppercase{
+    background-image: url(../assets/img/item2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search p{
+    color: #000;
+    font-size: 30px;
 }
