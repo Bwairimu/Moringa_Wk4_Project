@@ -19,10 +19,9 @@ text-transform: capitalize;
 }
 .navigation ::content{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     margin: 0 12px;
     align-items: center;
-
 }
 .cart img{
     height:30px;
@@ -32,5 +31,10 @@ text-transform: capitalize;
 }
 .menu ul li a {
     padding: 0 30px;
-    font-family: 'Raleway';
+    justify-content: space-between;
+    font-family:'Raleway', sans-serif;
+}
+#navbarNavAltMarkup{
+    justify-content: space-between;
+
 }
