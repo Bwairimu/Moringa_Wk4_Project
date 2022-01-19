@@ -19,7 +19,6 @@ list-style-type: none;
 .cart img {
     height:30px;
     display: flex;
-    justify-content: flex-end;
 }
 .cart a { 
     color: #bf033b;
@@ -28,26 +27,16 @@ list-style-type: none;
 .menu ul{
     display:flex;
 }
-.menu ul li a{
-    padding: 10px 0;
-    font-weight: bold;
-    color: #a6192e;
-    font-family:'Raleway',sans-serif;
-}
 #navbarNavAltMarkup{
     padding: 20px;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
     text-transform: uppercase;
 }
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 50%;
-}
-.carousel-item {
-    width:100%;
-    height:50%;
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
 }
 .title-text{
     align-items: center;
@@ -61,7 +50,7 @@ list-style-type: none;
 }
 .new{
     width: 540px;
-    height: 420px;
+    height: 320px;
     margin: 10px;
     background-image: url(../assets/img/new.jpg);
     background-repeat: no-repeat;
@@ -123,18 +112,19 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-.Order {
-    background-image: url(../assets/img/item2.jpg);
+.order {
+    background-image: url(../assets/img/pizza/menu-pizzajpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .search {
     display: flex;
-    background-image: url(../assets/img/item2.jpg);
+    background-image: url(../assets/img/menu-img/item2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
     align-items: center;
+    color: #a6192e;
     flex-direction: column;
 }
 .search p{
@@ -157,7 +147,7 @@ align-items: center;
 .text input[type=search]{
     border: none;
     background-color: transparent;
-    color: #000;
+    color: #0b0b0b;
     align-items: center;
     outline:none;
 }
@@ -169,7 +159,7 @@ align-items: center;
     font-weight: bold;
     outline: none;
     border-radius:0px 20px 0px 20px;
-    border-left:1px solid #CACDCD ;
+    border-left:1px solid #decba5;
 }
 .order{
     display: flex;
@@ -180,4 +170,90 @@ align-items: center;
     font-size: 40px;
     font-weight: bold;
     text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+.food-1, .food-2,.food-3{
+    width: 400px;
+    height: 350px;
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:2px;
+    text-shadow:2px 2px 12px rgba(0,0,0, 0.2)
+}
+.food-1 p, .food-2 p,.food-3 p{
+    margin: 0px;
+    padding: 0px;
+    font-size:30px;
+    color:#000;
+    font-weight: 100;
+    line-height: 1.2px;
+}
+.second-row{
+    display: flex;
+}
+.food-1{
+    background-image:url(../assets/img/pizza/pizza1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.food-2{
+    background-image:url(../assets/img/pizza/pizza2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.food-3{
+    background-image:url(../assets/img/pizza/pizza3.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.price button{
+    color:#a6192e;
+    border:none;
+    background-color: #decba5;
+    outline: none;
+    width: 70px;
+    height: 35px;
+    border-radius:20px;
+    box-shadow:2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+button:active{
+    transform: scale(1.2);
+    transition: all ease 0.5s;
+}
+.toppings,.crust {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    line-height:1.2em;
+    flex-direction: column;
+    width: 500px;
+    height:180px;
+    margin: 10px;
+    background-color: #decba5;
+}
+.third-row {
+    display: flex;
+}
+.toppings{
+    background-image:url(../assets/img/pizza/salamitoppings.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.crust{
+    background-image:url(../assets/img/new.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.toppings p:nth-child(1),
+.crust p:nth-child(1){
+    color: #a6192e;
+    font-weight:bold;
+    font-size:30px;
+}
+.toppings p:nth-child(2),
+.crust p:nth-child(2){
+    color:#a6192e;
+    font-weight:bold;
+    font-size:20px;
 }
