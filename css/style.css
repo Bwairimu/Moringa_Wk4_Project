@@ -33,6 +33,14 @@ list-style-type: none;
     align-items: center;
     text-transform: uppercase;
 }
+.navbar a.active {
+    background-color: #decba5;
+    color: #bf033b;
+  }
+  .navbar a:hover {
+    background-color: grey;
+    color: #ea272d;
+  }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 70%;
@@ -171,6 +179,16 @@ align-items: center;
     font-weight: bold;
     text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
+#onlineForm{
+    box-sizing: border-box;
+    font-family: 'Alegreya', serif;
+    font-size:medium;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;  
+    background-color: #decba5;
+    color: #a6192e;
+}
 .food-1, .food-2,.food-3{
     width: 400px;
     height: 350px;
@@ -230,7 +248,7 @@ button:active{
     width: 500px;
     height:180px;
     margin: 10px;
-    background-color: #decba5;
+    background-color: #f1f1f1;
 }
 .third-row {
     display: flex;
@@ -256,4 +274,15 @@ button:active{
     color:#a6192e;
     font-weight:bold;
     font-size:20px;
+}
+.footer{
+    background-color: #decba5;
+    height: 150px;
+}
+.social ul{
+    display: flex;
+    justify-content: center;
+}
+.social img{
+    height:30px;
 }
