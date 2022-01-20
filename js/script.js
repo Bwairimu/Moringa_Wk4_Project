@@ -66,3 +66,12 @@ $(document).ready(function(){
     });
   });
 });
+var inputtedSize=$("input:radio[name=pizzaSize]:checked").val();
+$("#displayName").text(inputtedName);
+$("#displaySize").text(inputtedSize);
+
+pizza= new pizza(toppingsArray, inputtedSize);
+
+var toppingBasedAmt=pizza.toppingsBasedAmount();
+var sizeBasedAmt=pizza.sizeBasedAMount();
+pizza.calculateCost(toppingBasedAmt,sizeBasedAmt);
