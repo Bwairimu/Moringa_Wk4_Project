@@ -23,9 +23,3 @@ $(document).ready(function(){
     $("#carouselGallery").carousel("next");
   });
 });
-
-
-function myFunction() {
-  location.replace("https://www.w3schools.com")
-}
-

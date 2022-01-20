@@ -94,6 +94,12 @@ list-style-type: none;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     outline: none;
 }
+.a link{
+    color:#ea272d;
+}
+.a nav-link{
+    color: #ea272d;
+}
 .search, .order{
     width: 540px;
     height: 150px;
@@ -186,7 +192,7 @@ align-items: center;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;  
-    background-color: #decba5;
+    background-color: #dbe0e3;
     color: #a6192e;
 }
 .food-1, .food-2,.food-3{
@@ -276,6 +282,7 @@ button:active{
     font-size:20px;
 }
 .footer{
+    display: flex;
     background-color: #decba5;
     height: 150px;
 }
@@ -285,4 +292,5 @@ button:active{
 }
 .social img{
     height:30px;
+    display: flex;
 }
