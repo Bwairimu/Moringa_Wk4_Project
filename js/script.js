@@ -1,41 +1,29 @@
-
 $(document).ready(function(){
-  // Activate Carousel
-  $("#carouselGallery").carousel();
-  // Enable Carousel Indicators
-  $(".carousel-item1").click(function(){
-    $("#carouselGallery").carousel(0);
-  });
-  $(".carousel-item2").click(function(){
-    $("#carouselGallery").carousel(1);
-  });
-  $(".carousel-item3").click(function(){
-    $("#carouselGallery").carousel(2);
-  });
-  $(".carousel-item4").click(function(){
-    $("#carouselGallery").carousel(3);
-  });
-  // Enable Carousel Controls
-  $(".left").click(function(){
-    $("#carouselGallery").carousel("prev");
-  });
-  $(".right").click(function(){
-    $("#carouselGallery").carousel("next");
-  });
+	var slideNum = $('.carousel-inner .carousel-item').length;
+	var randomNum = Math.floor(Math.random() * slideNum) + 1;
+	var randomNumIndex = randomNum - 1;
+	$('.carousel').carousel( randomNumIndex );
+	$('.carousel-item').removeClass('transparent');
 });
 
+
 function pizza(toppings, size){
-  this.toppings =toppings,
-  this. size=size
+  this.toppings =toppings;
+  this.size=size;
+  this.calculateCost=function(){
+    return this.toppings*this.size;
+  };
 }
+
 pizza.prototype.toppingsBasedAmount=function(){
   if(this.toppings.length!=0){
-    var toppingsPrice=this.toppings.length*3;
+    var toppingsPrice=this.toppings+ "" + length;
     return toppingsPrice;
   }else{
     alert("Please choose your Toppings")
   }
 }
+
 pizza.prototype.sizeBasedAMount=function(){
   if(this.size==="small"){
     return 500;
@@ -47,17 +35,29 @@ pizza.prototype.sizeBasedAMount=function(){
     alert ("Please select your preferred size")
   }
 }
+
 pizza.prototype.calculateCost=function(toppingsBasedAmount,sizeBasedAMount){
-  var totalCost=toppingsBasedAmount + sizeBasedAMount;
-  $("#displayTotalCost").html(totalCost);
+  return this.totalCost+""+ this.toppingsBasedAmount+ "" +this.sizeBasedAMount;
 }
-var pizza;
+
 $(document).ready(function(){
   $("#onlineForm").submit(function(event){
-    event.prventDefault();
+    event.preventDefault();
+
     $("#show-Bill").show();
-    var inputtedName=$("#name").val();
-    var inputtednumToppings=parseInt($("#numToppings").val());
+    var inputtedName=$("input#name").val();
+    var inputtednumToppings=$("input#numToppings").val();
+    var inputtedpizzaSize=$("input#pizzaSize").val();
+    var newBill =new pizza(inputtedName,inputtednumToppings,InputtedpizzaSize);
+     
+    alert(newBill);
+  });
+
+  $('#cancel').click(function(){
+    location.reload();
+  });
+
+  var inputtednumToppings=parseInt($("#numToppings").val());
     var toppingsArray=[];
     $("input:checkbox[name=toppingsCheck]:checked").each(function(){
       var inputtedToppings =$(this).val();
